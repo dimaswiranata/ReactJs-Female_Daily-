@@ -58,6 +58,7 @@ function index() {
                 <img
                   src={item.image}
                   className="h-16"
+                  alt={`brands-${index}`}
                 />
               </div>
             )

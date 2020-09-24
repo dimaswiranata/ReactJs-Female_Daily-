@@ -12,6 +12,7 @@ function index() {
         <img
           src={FMLogo}
           className="h-8 ml-3"
+          alt={`female logo`}
         />
       </div>
       <div className="flex flex-row p-2 ml-8 mr-6 border rounded-lg border-gray-400 w-3/4">
