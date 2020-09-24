@@ -1,36 +1,21 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, {Navigation, Pagination} from 'swiper';
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
 
-SwiperCore.use([Pagination]);
+import ReactPlayer from 'react-player'
 
-function swiper() {
-  const slides = [];
-
-  for (let i=0; i<5; i+=1){
-    slides.push(
-      <SwiperSlide key={`slide-${i}`}>
-        <div className="flex mr-2 h-16 w-16 rounded-full bg-gray-500 items-center justify-center">
-          <img
-            src={`https://static.femaledaily.com/dyn/70/images/user-pics/8cfa98979828b03949df998669bcca01.jpg`}
-            className="h-16 w-16 rounded-full"
-          />
-        </div>
-        <div>title</div>
-      </SwiperSlide>
-    )
-  }
-
+function index() {
   return (
-    <div>
-      <Swiper slidesPerView={3} pagination>
-        {slides}
-      </Swiper>
+    <div className="grid grid-cols-2 gap-32">
+      <ReactPlayer url='https://www.youtube.com/watch?v=Zgr_sr3L4QI'  width="750px" height="515px"/>
+      <div className="ml-3">
+        <div>
+          <ReactPlayer url='https://www.youtube.com/watch?v=Zgr_sr3L4QI'  width="450px" height="250px" />
+        </div>
+        <div className="mt-3">
+          <ReactPlayer url='https://www.youtube.com/watch?v=Zgr_sr3L4QI'  width="450px" height="250px" />
+        </div>
+      </div>
     </div>
   )
 }
 
-export default swiper
+export default index

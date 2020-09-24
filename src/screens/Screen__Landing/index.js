@@ -13,6 +13,7 @@ import Billboard from "components/banner/Billboard";
 import BottomBanner from "components/banner/BottomBanner";
 import Internal from "components/banner/Internal";
 import Popular from "components/popular";
+import Videos from "components/videos";
 import Trendings from "components/trending";
 import Brands from "components/brands";
 
@@ -55,6 +56,7 @@ class Landing extends Component {
         <Articles data={data.data["latest articles"]}/>
         <Reviews data={data.data["latest review"]}/>
         <Popular/>
+        <Videos/>
         <Trendings/>
         <Brands/>
         <Footer/>

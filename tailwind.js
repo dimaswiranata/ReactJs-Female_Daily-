@@ -32,7 +32,7 @@ module.exports = {
         100: '#fff5f5',
         200: '#fed7d7',
         300: '#feb2b2',
-        400: '#fc8181',
+        400: '#DB284E',
         500: '#f56565',
         600: '#e53e3e',
         700: '#c53030',
@@ -355,6 +355,7 @@ module.exports = {
     maxHeight: {
       full: '100%',
       screen: '100vh',
+      custom : '310px'
     },
     maxWidth: {
       xs: '20rem',
@@ -374,7 +375,7 @@ module.exports = {
       '0': '0',
       full: '100%',
       screen: '100vh',
-      custom : '300px'
+      custom : '310px'
     },
     minWidth: {
       '0': '0',

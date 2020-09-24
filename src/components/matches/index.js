@@ -17,6 +17,7 @@ function Matches() {
       rating : 4.5,
       name : 'SKINCEUTICALS',
       description : 'C. E. Perulic',
+      match : true
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ function Matches() {
       rating : 4.5,
       name : 'JUICE BEAUTY',
       description : 'Phyto-Pigments Flawless Serum',
+      match : true
     },
     {
       id: 3,
@@ -31,6 +33,7 @@ function Matches() {
       rating : 4.5,
       name : 'JUICE BEAUTY',
       description : 'Pure Pressed Blush',
+      match : true
     },
   ]
 
@@ -45,7 +48,7 @@ function Matches() {
       </div>
       <div className="w-64 flex flex-col mt-5">
         <div className="text-xl font-extrabold">Looking for products that are just simply perfect for you?</div>
-        <div className="font-semibold">Here are some products that we believe match your skin, hair and body! Have we mentioned that they solve your concerns too?</div>
+        <div className="font-semibold mt-3">Here are some products that we believe match your skin, hair and body! Have we mentioned that they solve your concerns too?</div>
         <div className="flex flex-row-reverse mt-4">
           <div className="py-2 px-3 text-base bg-red-600 rounded-lg text-white">
             See My Matches

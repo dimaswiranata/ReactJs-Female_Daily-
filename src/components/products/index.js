@@ -16,11 +16,12 @@ const StyledRating = withStyles({
 function Products({ data }) {
   return (
     <div>
-      <div className="pt-5 pb-3 px-3 rounded-xl bg-white min-h-custom">
+      <div className="pt-5 pb-3 px-3 rounded-xl bg-white max-h-custom min-h-custom">
         <img
           className="h-32"
           src={data.image}
         />
+        {data.match && <div className="text-xs text-red-500 font-bold mt-2">Match Skin Type</div>}
         <div className="flex flex-row items-center mt-2">
           <div className="font-bold font-size-inherit mr-1">{data.rating}</div>
           <StyledRating

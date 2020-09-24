@@ -14,7 +14,7 @@ function articles({ data }) {
           <div className="mr-2 text-red-400 font-semibold">
             See more
           </div>
-          <ArrowForwardIosIcon style={{ fontSize: 15, marginTop: 2, color: '#fc8181' }}/>
+          <ArrowForwardIosIcon style={{ fontSize: 15, marginTop: 2, color: '#DB284E' }}/>
         </div>
       </div>
       <div className="grid grid-cols-3 gap-4">
