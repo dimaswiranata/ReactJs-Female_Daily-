@@ -43,7 +43,7 @@ function Matches() {
         <img
           className="h-80"
           src={MatchesPhoto}
-          alt="matches photo"
+          alt="matches"
         />
       </div>
       <div className="w-64 flex flex-col mt-5">

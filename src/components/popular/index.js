@@ -61,11 +61,12 @@ function Popular() {
               <div
                 key={`popular-${index}`}
                 className="flex flex-col mt-3 mr-1 justify-center items-center border-t border-gray-400 shadow-custom rounded-xl pt-3 pb-12"
+                alt={`popular-${index}`}
               >
                 <img
                   src={item.image}
                   className="w-32 h-32 rounded-full object-cover"
-                  alt={`image-${index}`}
+                  alt={`popular of-${index}`}
                 />
                 <div className="mt-2 mb-4 font-bold">{item.caption}</div>
                 <div className="flex flex-row justify-between items-center w-1/2">

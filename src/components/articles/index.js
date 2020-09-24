@@ -17,7 +17,7 @@ function articles({ data }) {
           <ArrowForwardIosIcon style={{ fontSize: 15, marginTop: 2, color: '#DB284E' }}/>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4">
+      <div data-testid="data" className="grid grid-cols-3 gap-4">
         {
           data.map((item, index) => {
             return(
@@ -26,15 +26,17 @@ function articles({ data }) {
                 className="mt-3"
               >
                 <img
+                  data-testid="image"
                   src={item.image}
                   className="w-full h-40 rounded-xl object-cover"
+                  alt={`articles-${index}`}
                 />
-                <div className="w-19/20 font-bold text-md mt-2">{item.title}</div>
-                <div className="flex flex-row mt-3">
+                <div data-testid="title" className="w-19/20 font-bold text-md mt-2">{item.title}</div>
+                <div data-testid="author" className="flex flex-row mt-3">
                   <div className="text-sm text-gray-700 font-semibold">
                     {item.author} | 
                   </div>
-                  <div className="ml-2 text-sm text-gray-500 font-semibold">{item.published_at}</div>
+                  <div data-testid="published_at" className="ml-2 text-sm text-gray-500 font-semibold">{item.published_at}</div>
                 </div>
               </div>
             )

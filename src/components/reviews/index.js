@@ -39,6 +39,7 @@ function review({ data }) {
             <div className="flex flex-row border-b border-gray-400 pb-2 mb-1">
               {/* product image */}
               <img
+                data-testid="product-image"
                 src={data[i].product.image}
                 className="h-16"
                 alt={`product -${i}`}
@@ -46,14 +47,14 @@ function review({ data }) {
               {/* col */}
               <div>
                 {/* product name */}
-                <div className="text-sm font-semibold">{data[i].product.name}</div>
+                <div data-testid="product-name" className="text-sm font-semibold">{data[i].product.name}</div>
                 {/* product desc */}
-                <div className="text-sm">{data[i].product.desc}</div>
+                <div data-testid="product-desc" className="text-sm">{data[i].product.desc}</div>
               </div>
             </div>
 
             {/* star */}
-            <div className="flex flex-row justify-between mr-3 items-center">
+            <div data-testid="star" className="flex flex-row justify-between mr-3 items-center">
               <StyledRating
                 name="customized-color"
                 defaultValue={data[i].star}
@@ -64,7 +65,7 @@ function review({ data }) {
               <div className="text-sm text-gray-400">2 hours ago</div>
             </div>
             {/* comment */}
-            <div className="mb-10 text-sm">{data[i].comment}</div>
+            <div data-testid="comment" className="mb-10 text-sm">{data[i].comment}</div>
           </div>
                   
           <div className="flex flex-col justify-center items-center mt-30-">
@@ -77,14 +78,14 @@ function review({ data }) {
               />
             </div>
             {/* user name */}
-            <div>{data[i].user}</div>
+            <div data-testid="user">{data[i].user}</div>
             {/* array profile */}
-            <div className="flex flex-row">
+            <div data-testid="profile" className="flex flex-row">
               {
                 data[i].profile.map((profiles, index) => {
                   var lastIndex = data[i].profile.length -1;
                   return(
-                    <div key={`product-${index}`}>
+                    <div key={`profile-${index}`}>
                       <div className='mr-1 text-xs text-gray-600'>{profiles}{index === lastIndex ? ' ' : ','}</div>
                     </div>
                   )

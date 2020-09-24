@@ -10,7 +10,18 @@ import Product3 from "assets/images/products/product3.jpg";
 import Product4 from "assets/images/products/product4.jpg";
 import Product5 from "assets/images/products/product5.jpg";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, {Navigation, Pagination} from 'swiper';
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+
+// install Swiper components
+SwiperCore.use([Navigation, Pagination]);
+
 function Trending() {
+
+  const slides = [];
 
   const trendings = [
     {
@@ -48,7 +59,29 @@ function Trending() {
       name : 'SKINCEUTICALS',
       description : 'Phyto-Pigments Flawless Serum',
     },
+    {
+      id: 6,
+      image: Product4,
+      rating : 4,
+      name : 'VAL BY VALERIE THOMAS',
+      description : 'C. E. Perulic',
+    },
+    {
+      id: 7,
+      image: Product5,
+      rating : 4,
+      name : 'SKINCEUTICALS',
+      description : 'Phyto-Pigments Flawless Serum',
+    },
   ]
+
+  for (let i=0; i<trendings.length; i+=1){
+    slides.push(
+      <SwiperSlide key={`product-${i}`} className="pb-3">
+        <Products data={trendings[i]}/>
+      </SwiperSlide>
+    )
+  }
 
   return (
     <div className="px-40">
@@ -64,14 +97,10 @@ function Trending() {
           <ArrowForwardIosIcon style={{ fontSize: 15, marginTop: 2, color: '#DB284E' }}/>
         </div>
       </div>
-      <div className="grid grid-cols-5 gap-4">
-        {
-          trendings.map((item, index) => {
-            return(
-              <Products key={`products-${index}`} data={item}/>
-            )
-          })
-        }
+      <div className="">
+        <Swiper slidesPerView={5} pagination spaceBetween={5}>
+          {slides}
+        </Swiper>
       </div>
     </div>
   )
