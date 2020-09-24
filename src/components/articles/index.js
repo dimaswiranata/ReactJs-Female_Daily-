@@ -1,21 +1,46 @@
 import React from 'react'
 
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+
 function articles({ data }) {
   return (
-    <div>
-      {
-        data.map((item, index) => {
-          return(
-            <div
-              key={`articles-${index}`}
-            >
-              <h1>{item.author}</h1>
-              <h1>{item.published_at}</h1>
-              -------------------------
-            </div>
-          )
-        })
-      }
+    <div className="px-40 py-6">
+      <div className="text-xl font-extrabold">Latest Articles</div>
+      <div className="flex flex-row justify-between mb-4">
+        <div className="text-gray-600">
+          So you can make better purchase decision
+        </div>
+        <div className="flex flex-row justify-center items-center">
+          <div className="mr-2 text-red-400 font-semibold">
+            See more
+          </div>
+          <ArrowForwardIosIcon style={{ fontSize: 15, marginTop: 2, color: '#fc8181' }}/>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 gap-4">
+        {
+          data.map((item, index) => {
+            return(
+              <div
+                key={`articles-${index}`}
+                className="mt-3"
+              >
+                <img
+                  src={item.image}
+                  className="w-full h-40 rounded-xl object-cover"
+                />
+                <div className="w-19/20 font-bold text-md mt-2">{item.title}</div>
+                <div className="flex flex-row mt-3">
+                  <div className="text-sm text-gray-700 font-semibold">
+                    {item.author} | 
+                  </div>
+                  <div className="ml-2 text-sm text-gray-500 font-semibold">{item.published_at}</div>
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
     </div>
   )
 }

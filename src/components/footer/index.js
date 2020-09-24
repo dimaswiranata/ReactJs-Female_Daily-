@@ -66,8 +66,9 @@ function footer() {
           <img 
             src={FMLogo}
             className="h-8"
+            alt="fm logo"
           />
-          <div className="text-gray-600">Copyright © 215-2017 Female Daily Network • All rights reserved</div>
+          <div className="text-gray-600">Copyright © 2015-2017 Female Daily Network • All rights reserved</div>
         </div>
       </div>
       <div className="w-1/4  mt-3">
@@ -76,28 +77,34 @@ function footer() {
           <img
             src={AppStore}
             className="h-8"
+            alt="app store"
           />
           <img
             src={GooglePlay}
             className="h-8 ml-3"
+            alt="google play"
           />
         </div>
         <div className="flex flex-row mt-16">
           <img
             src={Facebook}
             className="h-8"
+            alt="facebook"
           />
           <img
             src={Twitter}
             className="h-8 ml-3"
+            alt="twitter"
           />
           <img
             src={Instagram}
             className="h-8 ml-3"
+            alt="instagram"
           />
           <img
             src={Youtube}
             className="h-8 ml-3"
+            alt="youtube"
           />
         </div>
       </div>

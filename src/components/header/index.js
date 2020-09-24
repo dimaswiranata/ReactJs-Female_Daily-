@@ -6,7 +6,7 @@ import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined'
 
 function index() {
   return (
-    <div className="flex flex-row fixed bg-white items-center border-t border-b border-gray-400 w-screen">
+    <div className="flex flex-row fixed z-50 bg-white items-center border-t border-b border-gray-400 w-screen">
       <div className="flex flex-row p-3">
         <MenuIcon color="disabled" style={{ fontSize: 30, color: '#343434' }}/>
         <img
